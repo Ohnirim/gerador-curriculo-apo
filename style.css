@@ -1,0 +1,77 @@
+/* --- ESTILOS DO FORMULÁRIO (index.php) --- */
+/* (Estes estilos continuam aqui para o seu index.php funcionar) */
+.card-header-color {
+    background-color: #007bff;
+    border-bottom: 0;
+    border-top-left-radius: var(--bs-card-inner-border-radius);
+    border-top-right-radius: var(--bs-card-inner-border-radius);
+}
+.logo-img {
+    width: 100px; /* Tamanho final da logo */
+    height: 100px; /* Tamanho final da logo */
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid #ddd;
+}
+
+/* --- ESTILOS DO NOVO CURRÍCULO (gerar_curriculo.php) --- */
+
+/* Define a largura máxima do currículo (tamanho A4) e centraliza */
+.resume-container-topdown {
+    width: 21cm;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para a lista de contatos no cabeçalho */
+.contact-list-topdown li {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+.contact-list-topdown li i {
+    color: #0d6efd; /* Azul */
+}
+
+/* Estilo dos novos títulos de seção (Objetivo, Formação, etc.) */
+.section-title-topdown {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+    margin-bottom: 1.5rem;
+}
+
+
+/* --- REQUISITO DE IMPRESSÃO (MUITO MAIS SIMPLES) --- */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        background-color: #fff !important;
+    }
+    
+    .resume-container-topdown {
+        box-shadow: none !important;
+        border: none !important;
+        width: 100%; /* Ocupa a largura da página de impressão */
+    }
+    
+    .card {
+        box-shadow: none !important;
+        border: none !important;
+    }
+    
+    /* Força a cor do ícone na impressão */
+    .contact-list-topdown li i {
+        color: #0d6efd !important; 
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+}
